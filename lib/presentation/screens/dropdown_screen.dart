@@ -6,7 +6,7 @@ import '../../bloc/dropdown_state.dart';
 import '../../../data/models/country.dart';
 import '../../../data/models/state.dart';
 import '../widgets/custom_dropdown_widget.dart';
-
+import 'summary_screen.dart';
 
 class DropdownScreen extends StatefulWidget {
   const DropdownScreen({super.key});
@@ -81,6 +81,41 @@ class DropdownScreenState extends State<DropdownScreen> {
                     },
                   ),
                 const SizedBox(height: 20),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.pink, // Background color
+                    foregroundColor: Colors.white, // Text color
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 32, vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    elevation: 5,
+                    textStyle: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onPressed: () {
+                    if (selectedCountry != null && selectedState != null) {
+                      Navigator.pushNamed(
+                        context,
+                        SummaryScreen.routeName,
+                        arguments: {
+                          'country': selectedCountry,
+                          'state': selectedState,
+                        },
+                      );
+                    } else {
+                      const snackBar = SnackBar(
+                        content:
+                        Text('Please select both a country and a state.'),
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    }
+                  },
+                  child: const Text('Submit'),
+                ),
               ],
             ),
           );
