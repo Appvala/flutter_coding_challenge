@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/dropdown_bloc.dart';
 import 'presentation/screens/dropdown_screen.dart';
 import 'data/services/api_service.dart';
+import 'presentation/screens/summary_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,6 +26,9 @@ class MyApp extends StatelessWidget {
         create: (context) => DropdownBloc(apiService: apiService),
         child: const DropdownScreen(),
       ),
+      routes: {
+        SummaryScreen.routeName: (context) => const SummaryScreen(),
+      },
     );
   }
 }
