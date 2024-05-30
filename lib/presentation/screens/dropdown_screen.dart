@@ -109,7 +109,7 @@ class DropdownScreenState extends State<DropdownScreen> {
                     } else {
                       const snackBar = SnackBar(
                         content:
-                        Text('Please select both a country and a state.'),
+                            Text('Please select both a country and a state.'),
                       );
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     }
