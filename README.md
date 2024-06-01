@@ -15,41 +15,6 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## Project Structure
-
-lib/
-├── bloc/
-│   ├── dropdown_bloc.dart
-│   ├── dropdown_event.dart
-│   └── dropdown_state.dart
-├── data/
-│   ├── models/
-│   │   ├── country.dart
-│   │   └── state.dart
-│   └── services/
-│       └── api_service.dart
-├── presentation/
-│   ├── screens/
-│   │   ├── dropdown_screen.dart
-│   │   └── summary_screen.dart
-│   └── widgets/
-│       └── custom_dropdown_widget.dart
-└── main.dart
-
-test/
-├── bloc/
-│   ├── dropdown_bloc_test.dart
-├── data/
-│   └── services/
-│       └── api_service_test.dart
-├── presentation/
-│   ├── screens/
-│   │   ├── dropdown_screen_test.dart
-│   └── widgets/
-│       └── custom_dropdown_widget_test.dart
-└── main_test.dart
-
-
 ## Overview
 
 The Flutter Dropdown App is a simple application designed to demonstrate
@@ -162,3 +127,37 @@ maintainable Flutter application. The architecture is modular,
 separating concerns across different layers, making the app easy to extend
 and maintain. The included tests ensure that the app's functionality is verified
 and reliable.
+
+## Project Structure
+
+lib/
+├── bloc/
+│   ├── dropdown_bloc.dart
+│   ├── dropdown_event.dart
+│   └── dropdown_state.dart
+├── data/
+│   ├── models/
+│   │   ├── country.dart
+│   │   └── state.dart
+│   └── services/
+│       └── api_service.dart
+├── presentation/
+│   ├── screens/
+│   │   ├── dropdown_screen.dart
+│   │   └── summary_screen.dart
+│   └── widgets/
+│       └── custom_dropdown_widget.dart
+└── main.dart
+
+test/
+├── bloc/
+│   ├── dropdown_bloc_test.dart
+├── data/
+│   └── services/
+│       └── api_service_test.dart
+├── presentation/
+│   ├── screens/
+│   │   ├── dropdown_screen_test.dart
+│   └── widgets/
+│       └── custom_dropdown_widget_test.dart
+└── main_test.dart
